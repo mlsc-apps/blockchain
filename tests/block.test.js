@@ -80,7 +80,7 @@ describe ('Test Block Mining', () => {
         expect(Block.AdjustDifficulty(newBlock, newBlock.timestamp + MINE_RATE + 100)).toEqual(newBlock.difficulty - 1);
     });
 
-    it('Test 8: Return difficulty 1 when mining too slow but difficulty already 1', () => {
+    it('Test 9: Return difficulty 1 when mining too slow but difficulty already 1', () => {
         newBlock.difficulty = 1;
         expect(Block.AdjustDifficulty(newBlock, newBlock.timestamp + MINE_RATE + 100)).toEqual(1);
     });
